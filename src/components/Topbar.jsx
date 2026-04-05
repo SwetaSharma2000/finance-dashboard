@@ -2,7 +2,7 @@ import { Menu, KeyRound, Eye, } from "lucide-react";
 import { useApp } from "../context/AppContext";
 
 const pageTitles = {
-  dashboard:    { title: "Dashboard",    sub: "March 2025 · Personal Finance"              },
+  dashboard:    { title: "Dashboard",    sub: "March 2026 · Personal Finance"              },
   transactions: { title: "Transactions", sub: "Manage and explore your transactions"       },
   insights:     { title: "Insights",     sub: "Understand your spending patterns"          },
 };
@@ -18,7 +18,7 @@ export default function Topbar({ activePage, sidebarOpen, setSidebarOpen }) {
       <div className="flex items-center gap-4">
         <button
           onClick={() => setSidebarOpen((s) => !s)}
-          className="text-[#4d7799] hover:text-[#ddeeff] transition-colors"
+          className="text-[#4d7799] hover:text-[#ddeeff] transition-colors  "
         >
           <Menu size={20} />
         </button>
@@ -32,7 +32,7 @@ export default function Topbar({ activePage, sidebarOpen, setSidebarOpen }) {
       <div className="flex items-center gap-3">
 
         {/* Role badge */}
-        <div className={`
+        {/* <div className={`
           flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-semibold border
           ${role === "admin"
             ? "bg-[#f5c842]/10 border-[#f5c842]/40 text-[#f5c842]"
@@ -44,7 +44,7 @@ export default function Topbar({ activePage, sidebarOpen, setSidebarOpen }) {
             : <Eye size={11} />
           }
           {role === "admin" ? "Admin" : "Viewer"}
-        </div>
+        </div> */}
 
         {/* Role switcher */}
         <div className="flex items-center gap-2 bg-white/[0.04] border border-[#16263d] rounded-lg px-3 py-[5px]">

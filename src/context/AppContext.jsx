@@ -61,7 +61,7 @@ export function AppProvider({ children }) {
   };
 
   const summary = useMemo(() => {
-    const march    = transactions.filter((t) => t.date.startsWith("2025-03"));
+    const march    = transactions.filter((t) => t.date.startsWith("2026-03"));
     const income   = march.filter((t) => t.type === "income").reduce((s, t) => s + t.amount, 0);
     const expenses = march.filter((t) => t.type === "expense").reduce((s, t) => s + Math.abs(t.amount), 0);
     return {

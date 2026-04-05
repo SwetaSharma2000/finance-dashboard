@@ -21,7 +21,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   return (
     <div className="bg-[#0a1628] border border-[#16263d] rounded-2xl px-5 py-4 shadow-2xl min-w-[180px]">
       <p className="text-[#4d7799] text-[11px] font-bold uppercase tracking-widest mb-3">
-        {label} 2025
+        {label} {payload?.[0]?.payload?.year}
       </p>
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-center gap-6">
@@ -83,7 +83,11 @@ const CustomLegend = () => (
 
 export default function BarChartView() {
   return (
-    <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5 h-full">
+    <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5 h-full       transition-all duration-300
+    hover:scale-[1.01]
+
+    shadow-[0_0_25px_rgba(168,85,247,0.15)]
+    hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]">
 
       {/* Header */}
       <div className="flex items-start justify-between mb-6">
@@ -92,7 +96,7 @@ export default function BarChartView() {
             Income vs Expenses
           </p>
           <p className="text-[11px] text-[#4d7799] mt-0.5">
-            6-month trend · Oct 2024 – Mar 2025
+            6-month trend · Oct 2025 – Mar 2026
           </p>
         </div>
         <div className="bg-[#00d9a6]/10 border border-[#00d9a6]/25 rounded-xl px-3 py-1.5">

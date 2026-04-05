@@ -32,7 +32,8 @@ export default function Insights() {
       </div>
 
       {/* ── Key Insight Cards ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
 
         {/* Top spending */}
         <div className="bg-[#0b1729] border border-[#f5c842]/30 rounded-2xl p-5 bg-linear-to-br from-[#f5c842]/10 to-[#0b1729]">
@@ -63,12 +64,13 @@ export default function Insights() {
         <div className="bg-[#0b1729] border border-[#a78bfa]/30 rounded-2xl p-5 bg-linear-to-br from-[#a78bfa]/10 to-[#0b1729]">
           <p className="text-[10px] font-bold uppercase tracking-widest text-[#4d7799] mb-2">💼 Income (Mar)</p>
           <p className="text-[20px] font-bold text-[#a78bfa]">{fmt(curr.income)}</p>
-          <p className="text-[11px] text-[#4d7799] mt-1">March 2025</p>
+          <p className="text-[11px] text-[#4d7799] mt-1">March 2026</p>
         </div>
 
       </div>
 
       {/* ── Charts Row ── */}
+      
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
         {/* Bar chart */}

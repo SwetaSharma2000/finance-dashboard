@@ -3,10 +3,10 @@
 A clean, interactive personal finance dashboard built as part of the Zorvyn FinTech Frontend Developer Intern screening assignment.
 
 ## Live Demo
-[View Live →] ()
+[View Live →](https://finance-dashboard-mu-seven.vercel.app/)
 
 ## Preview
-> 
+![Dashboard Preview](./assets/dashboard-preview.png)
 
 ---
 
@@ -81,7 +81,7 @@ src/
 ### Installation
 ```bash
 # Clone the repository
-git clone 
+git clone https://github.com/SwetaSharma2000/finance-dashboard
 
 # Navigate into the project
 cd finance-dashboard
@@ -131,7 +131,7 @@ This approach was chosen for simplicity, readability, and to avoid unnecessary d
 ## Assumptions Made
 
 - All data is static and mock — no backend or API integration
-- "March 2025" is used as the current active month for summary calculations
+- "March 2026" is used as the current active month for summary calculations
 - Role switching is frontend-only for demonstration purposes
 - CSV export applies to currently filtered transactions
 

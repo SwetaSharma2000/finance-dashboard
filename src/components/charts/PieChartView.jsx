@@ -98,7 +98,8 @@ export default function PieChartView() {
 
   if (!categorySpending.length) {
     return (
-      <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5 flex flex-col items-center justify-center h-full min-h-[300px] gap-3">
+      <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5 flex flex-col items-center justify-center h-full min-h-[300px] gap-3"
+      >
         <p className="text-4xl">📭</p>
         <p className="text-[#4d7799] text-[13px]">No expense data</p>
       </div>
@@ -114,12 +115,16 @@ export default function PieChartView() {
   }));
 
   return (
-    <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5 h-full">
+    <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5 h-full       transition-all duration-300
+hover:scale-[1.02]
+
+shadow-[0_0_25px_rgba(168,85,247,0.15)]
+hover:shadow-[0_0_35px_rgba(168,85,247,0.25)]">
 
       {/* Header */}
       <div className="mb-4">
         <p className="text-[14px] font-bold text-[#ddeeff]">Spending Breakdown</p>
-        <p className="text-[11px] text-[#4d7799] mt-0.5">By category · March 2025</p>
+        <p className="text-[11px] text-[#4d7799] mt-0.5">By category · March 2026</p>
       </div>
 
       {/* Donut chart */}

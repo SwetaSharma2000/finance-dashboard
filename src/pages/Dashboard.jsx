@@ -17,12 +17,13 @@ export default function Dashboard() {
           Good morning, Sweta 👋
         </h2>
         <p className="text-[12px] text-[#4d7799] mt-1">
-          Here's your financial overview for March 2025
+          Here's your financial overview for March 2026
         </p>
       </div>
 
       {/* ── Summary Cards ── */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
         <StatCard
           label="Total Balance"
           value={fmt(summary.balance)}
@@ -33,14 +34,14 @@ export default function Dashboard() {
         <StatCard
           label="Total Income"
           value={fmt(summary.income)}
-          sub="March 2025"
+          sub="March 2026"
           color="yellow"
           icon="📈"
         />
         <StatCard
           label="Total Expenses"
           value={fmt(summary.expenses)}
-          sub="March 2025"
+          sub="March 2026"
           color="red"
           icon="📉"
         />
@@ -55,6 +56,7 @@ export default function Dashboard() {
       </div>
 
       {/* ── Charts Row ── */}
+      
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <div className="lg:col-span-2">
           <BarChartView />
@@ -65,7 +67,9 @@ export default function Dashboard() {
       </div>
 
       {/* ── Quick Stats ── */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
         <div className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-5">
           <p className="text-[10px] font-bold uppercase tracking-widest text-[#4d7799] mb-3">
@@ -103,7 +107,7 @@ export default function Dashboard() {
             📅 This Month
           </p>
           <p className="text-[22px] font-bold font-mono text-[#f5c842]">
-            March 2025
+            March 2026
           </p>
           <p className="text-[11px] text-[#4d7799] mt-1">
             {summary.expenses > 0

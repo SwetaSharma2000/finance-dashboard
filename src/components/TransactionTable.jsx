@@ -89,29 +89,23 @@ export default function TransactionTable({ onEdit }) {
             <p className="text-[12px] text-[#4d7799]">Try adjusting your filters or search term</p>
           </div>
         ) : (
-          <div className="overflow-x-auto px-1">
+          <>
+          <div className="   hidden md:block overflow-x-auto px-1">
             <table className="w-full min-w-[860px] border-collapse">
 
               {/* Head */}
               <thead>
                 <tr className="border-b border-[#16263d] bg-[#16263d]/40">
                   {["Date", "Description", "Category", "Type", "Amount", ...(role === "admin" ? ["Actions"] : [])].map((h) => (
-                    // <th
-                    //   key={h}
-                    //   className={`
-                    //     px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-[#4d7799]
-                    //     ${h === "Amount" ? "text-right" : "text-left"}
-                    //     ${h === "Actions" ? "text-center" : ""}
-                    //   `}
-                    // >
+                    
                     <th
                    key={h}
                   className={`
                   px-4 py-3 text-[10px] font-bold uppercase tracking-widest text-[#4d7799]
 
-                 ${h === "Date" ? "pl-8 text-left" : ""}
-                 ${h === "Amount" ? "pr-3 text-right" : ""}
-                 ${h === "Actions" ? "pr-6 text-right" : ""}
+                 ${h === "Date" ? "pl-8 text-left   hidden sm:table-cell text-left" : ""}
+                 ${h === "Amount" ? "pr-3 text-right  hidden sm:table-cell text-left" : ""}
+                 ${h === "Actions" ? "pr-6 text-right  hidden sm:table-cell text-left" : ""}
                  ${h !== "Amount" && h !== "Actions" && h !== "Date" ? "text-left" : ""}
                 `}
                >
@@ -143,14 +137,14 @@ export default function TransactionTable({ onEdit }) {
                     </td>
 
                     {/* Category */}
-                    <td className="px-4 py-3">
+                    <td className="px-4 py-3  hidden sm:table-cell">
                       <span className="px-3 py-1 rounded-full text-[10px] font-semibold bg-[#4d7799]/20 text-[#4d7799]">
                         {tx.category}
                       </span>
                     </td>
 
                     {/* Type */}
-                    <td className="px-4 py-3">
+                    <td className="px-4 py-3    hidden md:table-cell">
                       <span
                         className={`
                           px-3 py-1 rounded-full text-[10px] font-semibold
@@ -199,8 +193,66 @@ export default function TransactionTable({ onEdit }) {
 
             </table>
           </div>
+
+          {/* MOBILE VIEW */}
+<div className="md:hidden flex flex-col gap-3 p-3">
+  {filteredTransactions.map((tx) => (
+    <div
+      key={tx.id}
+      className="bg-[#0b1729] border border-[#16263d] rounded-2xl p-4 hover:bg-white/5 transition"
+    >
+      <div className="flex justify-between items-center px-1 ">
+        <p className="text-[11px] text-[#4d7799] font-mono">
+          {fmtDate(tx.date)}
+        </p>
+        <p
+          className={`text-[13px] ml-2 font-bold ${
+            tx.type === "income" ? "text-[#00d9a6]" : "text-[#ff6b71]"
+          }`}
+        >
+          {tx.type === "income" ? "+" : "−"}
+          {fmt(tx.amount)}
+        </p>
+      </div>
+
+      <p className="text-[13px] font-semibold text-[#ddeeff] mt-1">
+        {tx.description}
+      </p>
+
+      <div className="flex justify-between mt-2 text-[11px]">
+        <span className="text-[#4d7799]">{tx.category}</span>
+        <span
+          className={`${
+            tx.type === "income" ? "text-[#00d9a6]" : "text-[#ff6b71]"
+          }`}
+        >
+          {tx.type}
+        </span>
+      </div>
+
+      {role === "admin" && (
+        <div className="flex gap-2 mt-3">
+          <button
+            onClick={() => onEdit(tx)}
+            className="flex-1 py-1 text-[11px] bg-[#f5c842]/10 border border-[#f5c842]/30 text-[#f5c842] rounded-md"
+          >
+            Edit
+          </button>
+          <button
+            onClick={() => deleteTransaction(tx.id)}
+            className="flex-1 py-1 text-[11px] bg-[#ff6b71]/10 border border-[#ff6b71]/30 text-[#ff6b71] rounded-md"
+          >
+            Delete
+          </button>
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+        </>
         )}
       </div>
     </div>
   );
 }
+    
