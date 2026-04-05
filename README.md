@@ -6,7 +6,7 @@ A clean, interactive personal finance dashboard built as part of the Zorvyn FinT
 [View Live →](https://finance-dashboard-mu-seven.vercel.app/)
 
 ## Preview
-![Dashboard Preview](./assets/dashboard-preview.png)
+![Dashboard Preview](./images/dashboard-preview.png)
 
 ---
 
