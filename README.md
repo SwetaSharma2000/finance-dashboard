@@ -8,7 +8,7 @@ through an intuitive and responsive interface.
 [View Live →](https://finance-dashboard-mu-seven.vercel.app/)
 
 ## Preview
-![Dashboard Preview](./images/dashboard-preview.png)
+![Dashboard Preview](./images/Fintrack.png)
 
 ---
 
