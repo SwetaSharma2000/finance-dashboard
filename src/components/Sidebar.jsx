@@ -71,7 +71,7 @@ function SidebarContent({ activePage, setActivePage, sidebarOpen }) {
         </div>
         {sidebarOpen && (
           <span className="font-bold text-[15px] whitespace-nowrap text-[#ddeeff]">
-            Zorvyn
+            FinTrack 
           </span>
         )}
       </div>

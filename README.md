@@ -1,6 +1,8 @@
 # FinTrack — Finance Dashboard UI
 
-A clean, interactive personal finance dashboard built as part of the Zorvyn FinTech Frontend Developer Intern screening assignment.
+A clean, interactive personal finance dashboard built with React 19 and Tailwind CSS. 
+Designed to help users track income, expenses, and understand their spending patterns 
+through an intuitive and responsive interface.
 
 ## Live Demo
 [View Live →](https://finance-dashboard-mu-seven.vercel.app/)
